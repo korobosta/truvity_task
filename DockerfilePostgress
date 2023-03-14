@@ -1,0 +1,6 @@
+FROM postgres:13.1
+ENV POSTGRES_USER test
+ENV POSTGRES_DB users
+ENV POSTGRES_PASSWORD test
+VOLUME /var/lib/postgresql/data
+COPY init.sql /docker-entrypoint-initdb.d/
